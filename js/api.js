@@ -11,14 +11,14 @@ class API{
 
     async obtenerTabla(leagueID){
         this.leagueID = leagueID
-        const url = `https://allsportsapi.com/api/football/?&met=Standings&leagueId=${this.leagueID}&APIkey=${this.apikey}`;
+        const url = `https://allsportsapi.com/api/football/?&met=Standings&leagueId=${this.leagueID}&timezone=America/Argentina/Buenos_Aires&APIkey=${this.apikey}`;
     
         // fetch a la api
         const tablaLiga = await fetch(url);
 
         // respuesta en json
         const tabla = await tablaLiga.json();
-        console.log(tabla);
+        //console.log(tabla);
         return {tabla};
     }
     mostrarTabla(torneoID){
@@ -67,7 +67,7 @@ class API{
       
       async obtenerPartidosDia(leagueID){
         this.leagueID = leagueID
-        const url = `https://allsportsapi.com/api/football/?met=Fixtures&leagueId=${this.leagueID}&APIkey=${this.apikey}&from=2020-06-30&to=2020-06-30`;
+        const url = `https://allsportsapi.com/api/football/?met=Fixtures&leagueId=${this.leagueID}&timezone=America/Argentina/Buenos_Aires&APIkey=${this.apikey}&from=2020-06-30&to=2020-06-30`;
     
         // fetch a la api
         const partidosDia = await fetch(url);
@@ -86,7 +86,7 @@ class API{
         this.obtenerPartidosDia(torneoId)
         .then((partido)=>{
            let todosPartidos = partido.partido.result
-           
+           console.log(partido)
            todosPartidos.forEach(partido=>{
                console.log(`${partido.event_home_team} ${partido.event_final_result} ${partido.event_away_team}`)
                //console.log(partido)
