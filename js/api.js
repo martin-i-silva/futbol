@@ -5,7 +5,7 @@ class API{
     }
 
     init(){
-        this.mostrarTabla(document.getElementById('campeonato-ale').value)
+        this.mostrarTabla(document.getElementById('campeonato-arg').value)
     };
 
 
