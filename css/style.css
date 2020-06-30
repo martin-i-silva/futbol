@@ -113,7 +113,13 @@ footer div{
   
 }
 
-
+.result{
+  background: rgb(0, 11, 34);
+  color: #f2f2f2;
+  padding: 2px;
+  width: 60%;
+  margin: 6px auto;
+}
 .spinner {
     margin: 100px auto;
     width: 100px;

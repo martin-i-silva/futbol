@@ -87,10 +87,11 @@ class API{
         .then((partido)=>{
            let todosPartidos = partido.partido.result
            console.log(partido)
+           let resultado = document.createElement('div')
+           resultado.setAttribute('id', "resultado-div")
            todosPartidos.forEach(partido=>{
-
-               let resultado = document.createElement('p')
-                resultado.innerHTML = `${partido.event_home_team} ${partido.event_final_result} ${partido.event_away_team}`
+               
+               resultado.innerHTML += `<p class="result">${partido.event_home_team} ${partido.event_final_result} ${partido.event_away_team}</p>`
                document.querySelector('#resultado').appendChild(resultado)
                console.log(`${partido.event_home_team} ${partido.event_final_result} ${partido.event_away_team}`)
                //console.log(partido)
@@ -98,6 +99,9 @@ class API{
             
             //console.log(partido.partido.result)
 
+          })
+          .catch((partido)=>{
+              console.log('no hay partidos')
           })
       }
 

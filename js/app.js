@@ -27,6 +27,7 @@ for(var i=0;i<liga.length;i++){
     let ligaValue = liga[i].value
 
     liga[i].addEventListener('click', () => {
+        if(document.querySelector('#resultado-div')){document.querySelector('#resultado-div').remove()}
         api.mostrarPartidos(ligaValue)
         })
 } 
