@@ -1,0 +1,168 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    background: rgb(238, 238, 238);
+    width: 100%;
+    
+    }
+header{
+  width: 100%;
+  height: 200px;
+
+}
+h1{
+  background-color:rgb(0, 11, 34);
+  color: #fff;
+  font-size: 100px;
+  text-align: center;
+  padding: 35px;
+  font-weight:bold;
+}
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	/* background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%); */
+	background-color:rgb(0, 11, 34);
+	border-radius:4px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff;
+	font-family:Arial;
+	font-size:17px;
+	/* font-weight:bold; */
+	padding:10px 20px;
+	text-decoration:none;
+  /* text-shadow:0px 1px 0px #f2f2f2; */
+  
+  
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  background-color:#dfdfdf;
+  color:rgb(0, 11, 34);
+}
+.myButton:active {
+	position:relative;
+  top:5px;
+  
+}
+
+
+.contenido-principal {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  color: rgb(17, 35, 97);
+  font-size: 18px;
+  margin: 0px auto;
+  
+  
+  /* background-image: url('/img/laligapatron2.png'); */
+  /* background-repeat: repeat; */
+  /* box-shadow: -1px 20px 52px -13px rgba(0,0,0,0.75); */
+}
+.contenido-principal table {
+  width: 70%;
+  background: #f2f2f2;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+.contenido-principal th {
+  background:rgb(0, 11, 34);
+  color: white;
+  padding: 3px 0px;
+}
+
+.contenido-principal tbody tr:hover {
+  background:grey ;
+  color: white; 
+  cursor: pointer;
+
+}
+.first{
+  background:rgba(31, 124, 15, 0.582); ;
+  color: white;
+}
+.descend
+{
+  background:rgba(151, 9, 9, 0.685); ;
+  color: white;
+}
+.prom
+{
+  background:rgba(151, 61, 9, 0.685); ;
+  color: white;
+}
+
+.mensajes {
+    color: white;
+}
+#resultado {
+    text-align: center;
+}
+.btn {
+    width: 100%;
+}
+.contenido-spinner {
+    display: none;
+} 
+footer div{
+  width: 100%;
+  background: rgb(0, 11, 34);
+  height: 50px;
+  
+}
+
+
+.spinner {
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .spinner > div {
+    background-color: #136a8a;
+    height: 100%;
+    width: 12px;
+    display: inline-block;
+    
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+  
+  .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  
+  .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  .spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }

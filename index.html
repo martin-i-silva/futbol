@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La Liga</title>
+     
+     <link href="https://bootswatch.com/4/sandstone/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <h1>Futbol</h1>
+    </header>
+    <!-- <h1 class="text-center my-5" id="campeonato-esp">Campeonato español</h1> -->
+    <div class="container contenido-principal">
+      <div id="ligas">
+      <button class="text-center my-5 myButton" value="11" id="campeonato-arg">Superliga</button>
+      <button class="text-center my-5 myButton" value="468" id="campeonato-esp">La Liga</button>
+      <button class="text-center my-5 myButton" value="195" id="campeonato-ale">Bundesliga</button>
+      <button class="text-center my-5 myButton" value="262" id="campeonato-ita">Serie A</button>
+      <button class="text-center my-5 myButton" value="148" id="campeonato-ing">Premier League</button>
+      </div>
+        <div class="row justify-content-center">
+            <table id="tabla" border="1">
+                <thead>
+                  <tr>
+                    
+                    <th>Equipo</th>
+                    <th>PJ</th>
+                    <th>Pts</th>
+                    <th>PG</th>
+                    <th>PE</th>
+                    <th>PP</th>
+                    
+                  </tr>
+                </thead>
+              
+              </table>
+            
+               
+
+                <div class="panel-resultados row justify-content-center mt-5">
+                    <div class="contenido-spinner">
+                        <div class="spinner">
+                            <div class="rect1"></div>
+                            <div class="rect2"></div>
+                            <div class="rect3"></div>
+                            <div class="rect4"></div>
+                            <div class="rect5"></div>
+                          </div>
+                    </div>
+                    <div class="mensajes col-12"></div>
+                    <div id="resultado" class="col-12"></div>
+                </div><!--panel-resultados-->
+            </form>
+        </div> 
+    </div>
+    <footer>
+      <div>
+        
+      </div>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
