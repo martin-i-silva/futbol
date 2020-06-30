@@ -88,6 +88,10 @@ class API{
            let todosPartidos = partido.partido.result
            console.log(partido)
            todosPartidos.forEach(partido=>{
+
+               let resultado = document.createElement('p')
+                resultado.innerHTML = `${partido.event_home_team} ${partido.event_final_result} ${partido.event_away_team}`
+               document.querySelector('#resultado').appendChild(resultado)
                console.log(`${partido.event_home_team} ${partido.event_final_result} ${partido.event_away_team}`)
                //console.log(partido)
            })
