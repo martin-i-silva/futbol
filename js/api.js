@@ -100,8 +100,12 @@ class API{
             //console.log(partido.partido.result)
 
           })
-          .catch((partido)=>{
-              console.log('no hay partidos')
+          .catch(()=>{
+            let resultado = document.createElement('div')
+            resultado.setAttribute('id', "resultado-div")
+            resultado.innerHTML = `<p class="result">No hay partidos</p>`
+            document.querySelector('#resultado').appendChild(resultado)
+            //console.log('no hay partidos')
           })
       }
 
