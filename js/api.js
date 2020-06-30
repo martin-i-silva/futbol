@@ -28,7 +28,7 @@ class API{
         this.obtenerTabla(torneoId)
         .then((tabla)=>{
         let tablaTotal = tabla.tabla.result.total
-        if(document.querySelector('#tabla-body')){document.querySelector('#tabla-body').remove()}
+        
     
         const tbody = document.createElement('tbody');
         tbody.setAttribute('id', "tabla-body")
@@ -58,6 +58,13 @@ class API{
           })
       }
 
+
+    estadoSpinner(type){
+        const spinner = document.querySelector('.contenido-spinner');
+        spinner.style.display = type;
+    }
+
+      
       async obtenerPartidosDia(leagueID){
         this.leagueID = leagueID
         const url = `https://allsportsapi.com/api/football/?met=Fixtures&leagueId=${this.leagueID}&APIkey=${this.apikey}&from=2020-06-30&to=2020-06-30`;

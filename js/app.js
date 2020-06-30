@@ -11,7 +11,14 @@ for(var i=0;i<liga.length;i++){
     let ligaValue = liga[i].value
 
     liga[i].addEventListener('click', () => {
-        api.mostrarTabla(ligaValue)
+        if(document.querySelector('#tabla-body')){document.querySelector('#tabla-body').remove()}
+        api.estadoSpinner('block');
+        setTimeout(()=>{
+            //insertar el resultado
+            api.mostrarTabla(ligaValue)
+            api.estadoSpinner('none');
+        }, 2000)
+        
         })
 } 
 
@@ -23,3 +30,9 @@ for(var i=0;i<liga.length;i++){
         api.mostrarPartidos(ligaValue)
         })
 } 
+
+
+
+
+        
+        
