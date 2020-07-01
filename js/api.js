@@ -1,7 +1,17 @@
+let date = new Date()
+
+//let fecha =`${date.getFullYear()}/0${date.getMonth()+1}/${date.getDate()}`
+
+
+//console.log(fecha)
+        
+
 class API{
     constructor(){
         this.apikey = 'ff3dcbf972e4186695d12a6e52de4687b39d626c8b9baab46894b8d00458f57f';
         this.init();
+        this.fecha =`${date.getFullYear()}-${("0" + (date.getMonth() + 1)).slice(-2)}-${date.getDate()}`
+        console.log(this.fecha)
     }
 
     init(){
@@ -67,7 +77,7 @@ class API{
       
       async obtenerPartidosDia(leagueID){
         this.leagueID = leagueID
-        const url = `https://allsportsapi.com/api/football/?met=Fixtures&leagueId=${this.leagueID}&timezone=America/Argentina/Buenos_Aires&APIkey=${this.apikey}&from=2020-06-30&to=2020-06-30`;
+        const url = `https://allsportsapi.com/api/football/?met=Fixtures&leagueId=${this.leagueID}&timezone=America/Argentina/Buenos_Aires&APIkey=${this.apikey}&from=${this.fecha}&to=${this.fecha}`;
     
         // fetch a la api
         const partidosDia = await fetch(url);

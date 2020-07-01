@@ -31,9 +31,3 @@ for(var i=0;i<liga.length;i++){
         api.mostrarPartidos(ligaValue)
         })
 } 
-
-
-
-
-        
-        
